@@ -10,15 +10,23 @@ String countUp(int count) {
   return sb.toString();
 }
 
-Future<String> createFutureCounter(int count){
-  return new Future((){return countUp(count);});
+Future<String> createFutureCounter(int count) {
+  return new Future(() {
+    return countUp(count);
+  });
+}
+
+void countUpAsync(int count) async {
+  print('Async operation start');
+  String value = await createFutureCounter(count);
+  print('Async operation succeeded: ${value}');
 }
 
 void main() {
   print('start main');
-  Future<String> future = createFutureCounter(100);
-  print('adding Future API callbacks');
-  future.then((value) => handleCompletion(value));
+  // Future<String> future = createFutureCounter(100);
+  countUpAsync(100);
+  // future.then((value) => handleCompletion(value));
 }
 
 void handleError(err) {
