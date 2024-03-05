@@ -30,7 +30,7 @@ class MyHomePage extends StatelessWidget {
         appBar: AppBar(
           title: Text(title),
         ),
-        body: ListView(children: const <Widget>[
+        body: const Column (children: <Widget>[
           CarWidget("Bmw", "M3",
               "https://media.ed.edmunds-media.com/bmw/m3/2018/oem/2018_bmw_m3_sedan_base_fq_oem_4_150.jpg"),
           CarWidget("Nissan", "GTR",
