@@ -30,7 +30,7 @@ class MyHomePage extends StatelessWidget {
         appBar: AppBar(
           title: Text(title),
         ),
-        body: const Column (children: <Widget>[
+        body: const Column(children: <Widget>[
           CarWidget("Bmw", "M3",
               "https://media.ed.edmunds-media.com/bmw/m3/2018/oem/2018_bmw_m3_sedan_base_fq_oem_4_150.jpg"),
           CarWidget("Nissan", "GTR",
@@ -50,14 +50,12 @@ class CarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-        padding: const EdgeInsets.all(20.0),
-        child:  Center(
-                child: Column(children: <Widget>[
-              Text('$make $model', style: const TextStyle(fontSize: 24.0)),
-              Padding(
-                  padding: const EdgeInsets.only(top: 20.0),
-                  child: Image.network(imageSrc))
-            ])));
+    return Center(
+        child: Column(children: <Widget>[
+      Text('$make $model', style: const TextStyle(fontSize: 24.0)),
+      Padding(
+          padding: const EdgeInsets.only(top: 20.0),
+          child: Image.network(imageSrc))
+    ]));
   }
 }
