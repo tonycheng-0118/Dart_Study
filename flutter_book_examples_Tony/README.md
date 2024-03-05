@@ -9,3 +9,11 @@ Paperback:
 https://www.amazon.com/Learn-Google-Flutter-Fast-Example/dp/1092297375/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1555020799&sr=8-1-spell
 
 Git repo: https://github.com/markclow/flutter_book_examples.git
+
+To copy the `flutter_book_examples` to `flutter_book_examples_Tony` flow
+  - upload first_stateless example
+  - flow
+    - create project
+    - copy example/lib/main.dart
+    - dart fix --dry-run
+    - dart fix --apply
